@@ -364,4 +364,5 @@ PRODUCT_PACKAGES_DEBUG += \
 # WiFi
 PRODUCT_PACKAGES += \
     libnl \
+    TetheringOverlay \
     WifiOverlay
