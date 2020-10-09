@@ -225,9 +225,6 @@ PRODUCT_PACKAGES += \
 
 # Display
 PRODUCT_PACKAGES += \
-    libdisplayconfig \
-    libqdMetaData \
-    libqdMetaData.system \
     libion \
     libtinyxml2
 
@@ -302,9 +299,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0
-
-PRODUCT_PACKAGES += \
-    vendor.display.config@1.5
 
 # Remove unwanted packages
 PRODUCT_PACKAGES += \
