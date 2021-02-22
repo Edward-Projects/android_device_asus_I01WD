@@ -362,6 +362,13 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # WiFi
 PRODUCT_PACKAGES += \
-    libnl \
     TetheringOverlay \
     WifiOverlay
+
+# Wifi Display
+PRODUCT_PACKAGES += \
+    libavservices_minijail \
+    libnl \
+
+PRODUCT_BOOT_JARS += \
+    WfdCommon
