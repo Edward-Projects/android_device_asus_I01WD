@@ -56,11 +56,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_SHIPPING_API_LEVEL := 28
 
 # AsusParts
-PRODUCT_PACKAGES += \
-    AsusParts
+#PRODUCT_PACKAGES += \
+#    AsusParts
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/privapp-permissions-asusparts.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-asusparts.xml
+#PRODUCT_COPY_FILES += \
+#    $(LOCAL_PATH)/configs/privapp-permissions-asusparts.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-asusparts.xml
     
 # audio
 PRODUCT_COPY_FILES += \
