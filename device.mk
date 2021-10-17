@@ -28,6 +28,7 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 # VNDK
 PRODUCT_TARGET_VNDK_VERSION := 30
+PRODUCT_EXTRA_VNDK_VERSIONS := 30
 
 # A/B
 AB_OTA_UPDATER := true
@@ -118,11 +119,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/excluded-input-devices.xml:system/etc/excluded-input-devices.xml
 
 # FM
-PRODUCT_PACKAGES += \
-    libqcomfm_jni \
-    qcom.fmradio
+#PRODUCT_PACKAGES += \
+#    libqcomfm_jni \
+#    qcom.fmradio
 
-PRODUCT_BOOT_JARS += qcom.fmradio
+#PRODUCT_BOOT_JARS += qcom.fmradio
 
 # Frameworks
 PRODUCT_PACKAGES += \
@@ -248,5 +249,5 @@ PRODUCT_PACKAGES += \
     libavservices_minijail \
     libnl \
 
-PRODUCT_BOOT_JARS += \
-    WfdCommon
+#PRODUCT_BOOT_JARS += \
+#    WfdCommon
