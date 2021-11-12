@@ -1,3 +1,6 @@
+on init
+    mount none /product/vendor_overlay/30/etc/audio_policy_configuration.xml /vendor/etc/audio_policy_configuration.xml bind
+
 on boot
     # Gestures
     chown system system /proc/driver/dclick
