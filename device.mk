@@ -23,8 +23,7 @@ $(call inherit-product, vendor/asus/I01WD/I01WD-vendor.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
-    vendor/omni/overlay/CarrierConfig
+    $(LOCAL_PATH)/overlay
 
 # VNDK
 PRODUCT_TARGET_VNDK_VERSION := 30
@@ -41,12 +40,12 @@ AB_OTA_PARTITIONS += \
 
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
-    POSTINSTALL_PATH_system=system/bin/omnipreopt_script \
+    POSTINSTALL_PATH_system=system/bin/otapreopt_script \
     FILESYSTEM_TYPE_system=ext4 \
     POSTINSTALL_OPTIONAL_system=true
 
 PRODUCT_PACKAGES += \
-    omnipreopt_script
+    otapreopt_script
 
 # ANT+
 PRODUCT_PACKAGES += \
@@ -93,7 +92,6 @@ PRODUCT_PACKAGES += \
 # DeviceParts
 PRODUCT_PACKAGES += \
     DeviceParts \
-    OmniDisplayManager
 
 # Display
 PRODUCT_PACKAGES += \

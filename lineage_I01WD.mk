@@ -23,24 +23,21 @@
 # $(call inherit-product, device/sample/products/backup_overlay.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 
-# Get the prebuilt list of APNs
-$(call inherit-product, vendor/omni/config/gsm.mk)
-
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
-# must be before including omni part
-TARGET_BOOTANIMATION_SIZE := 1080p
+# Boot animation resolution
+TARGET_BOOT_ANIMATION_RES := 1080
 
 # Inherit from our custom product configuration
-$(call inherit-product, vendor/omni/config/common.mk)
+$(call inherit-product, vendor/lineage/config/common.mk)
 
 # Inherit from hardware-specific part of the product configuration
 $(call inherit-product, device/asus/I01WD/device.mk)
 
 # Discard inherited values and use our own instead.
 PRODUCT_DEVICE := I01WD
-PRODUCT_NAME := omni_I01WD
+PRODUCT_NAME := lineage_I01WD
 PRODUCT_BRAND := asus
 PRODUCT_MODEL := ASUS_I01WD
 PRODUCT_MANUFACTURER := asus
@@ -49,7 +46,7 @@ TARGET_DEVICE := WW_I01WD
 PRODUCT_SYSTEM_DEVICE := ASUS_I01WD
 PRODUCT_SYSTEM_NAME := WW_I01WD
 
-OMNI_PRODUCT_PROPERTIES += \
+PRODUCT_PROPERTIES += \
     ro.build.product=ZS630KL
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
@@ -59,7 +56,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 VENDOR_RELEASE := 11/RKQ1.200710.002/18.0610.2106.156-0:user/release-keys
 BUILD_FINGERPRINT := asus/WW_I01WD/ASUS_I01WD:$(VENDOR_RELEASE)
-OMNI_BUILD_FINGERPRINT := asus/WW_I01WD/ASUS_I01WD:$(VENDOR_RELEASE)
-OMNI_PRIVATE_BUILD_DESC := "'RKQ1.200710.002.WW_Phone-18.0610.2106.156-0'"
+PRIVATE_BUILD_DESC := "'RKQ1.200710.002.WW_Phone-18.0610.2106.156-0'"
 
 PLATFORM_SECURITY_PATCH_OVERRIDE := 2021-06-01
