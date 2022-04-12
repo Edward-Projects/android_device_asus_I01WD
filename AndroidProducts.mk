@@ -1,8 +1,8 @@
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/device.mk \
-    $(LOCAL_DIR)/lineage_zenfone6.mk
+    $(LOCAL_DIR)/lineage_I01WD.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_zenfone6-user \
-    lineage_zenfone6-userdebug \
-    lineage_zenfone6-eng
+    lineage_I01WD-user \
+    lineage_I01WD-userdebug \
+    lineage_I01WD-eng

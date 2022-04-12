@@ -31,11 +31,11 @@ TARGET_BOOT_ANIMATION_RES := 2280
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Inherit from hardware-specific part of the product configuration
-$(call inherit-product, device/asus/zenfone6/device.mk)
+$(call inherit-product, device/asus/I01WD/device.mk)
 
 # Discard inherited values and use our own instead.
-PRODUCT_DEVICE := zenfone6
-PRODUCT_NAME := lineage_zenfone6
+PRODUCT_DEVICE := I01WD
+PRODUCT_NAME := lineage_I01WD
 PRODUCT_BRAND := asus
 PRODUCT_MODEL := ASUS_I01WD
 PRODUCT_MANUFACTURER := asus

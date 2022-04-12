@@ -20,7 +20,7 @@
 # device-specific aspects (drivers) with a device-agnostic
 # product configuration (apps).
 #
-$(call inherit-product, vendor/asus/zenfone6/zenfone6-vendor.mk)
+$(call inherit-product, vendor/asus/I01WD/I01WD-vendor.mk)
 
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
@@ -135,8 +135,8 @@ PRODUCT_PACKAGES += \
 
 # Prebuilt
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,device/asus/zenfone6/prebuilt/system,system) \
-    $(call find-copy-subdir-files,*,device/asus/zenfone6/prebuilt/root,root)
+    $(call find-copy-subdir-files,*,device/asus/I01WD/prebuilt/system,system) \
+    $(call find-copy-subdir-files,*,device/asus/I01WD/prebuilt/root,root)
 
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
