@@ -20,7 +20,7 @@
 set -e
 
 # Required!
-DEVICE=zenfone6
+DEVICE=I01WD
 VENDOR=asus
 
 INITIAL_COPYRIGHT_YEAR=2019
@@ -42,7 +42,7 @@ fi
 setup_vendor "$DEVICE" "$VENDOR" "$CM_ROOT"
 
 # Copyright headers and guards
-write_headers "zenfone6"
+write_headers "I01WD"
 
 # The standard blobs
 write_makefiles "$MY_DIR"/proprietary-files.txt

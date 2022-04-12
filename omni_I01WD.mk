@@ -36,11 +36,11 @@ TARGET_BOOTANIMATION_SIZE := 1080p
 $(call inherit-product, vendor/omni/config/common.mk)
 
 # Inherit from hardware-specific part of the product configuration
-$(call inherit-product, device/asus/zenfone6/device.mk)
+$(call inherit-product, device/asus/I01WD/device.mk)
 
 # Discard inherited values and use our own instead.
-PRODUCT_DEVICE := zenfone6
-PRODUCT_NAME := omni_zenfone6
+PRODUCT_DEVICE := I01WD
+PRODUCT_NAME := omni_I01WD
 PRODUCT_BRAND := asus
 PRODUCT_MODEL := ASUS_I01WD
 PRODUCT_MANUFACTURER := asus

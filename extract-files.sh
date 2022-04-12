@@ -18,7 +18,7 @@
 
 set -e
 
-DEVICE=zenfone6
+DEVICE=I01WD
 VENDOR=asus
 
 # Load extractutils and do some sanity checks
