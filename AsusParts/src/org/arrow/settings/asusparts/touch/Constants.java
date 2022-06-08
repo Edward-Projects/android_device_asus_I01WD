@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.aospextended.settings.asusparts.touch;
+package org.arrow.settings.asusparts.touch;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -32,7 +32,7 @@ import android.media.AudioManager;
 public class Constants {
 
     // Broadcast action for settings update
-    static final String UPDATE_PREFS_ACTION = "org.aospextended.settings.asusparts.touch.UPDATE_SETTINGS";
+    static final String UPDATE_PREFS_ACTION = "org.arrow.settings.asusparts.touch.UPDATE_SETTINGS";
 
     // Screen off Gesture actions
     static final int ACTION_BACK = 2;

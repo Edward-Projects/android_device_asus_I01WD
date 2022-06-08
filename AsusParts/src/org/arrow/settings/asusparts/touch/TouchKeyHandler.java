@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.aospextended.settings.asusparts.touch;
+package org.arrow.settings.asusparts.touch;
 
 import android.content.ActivityNotFoundException;
 import android.content.BroadcastReceiver;
@@ -49,7 +49,7 @@ import android.util.SparseIntArray;
 import android.view.KeyEvent;
 
 import com.android.internal.os.DeviceKeyHandler;
-import com.android.internal.util.aospextended.AEXUtils;
+import com.android.internal.util.arrow.ArrowUtils;
 
 import java.util.List;
 
@@ -288,7 +288,7 @@ public class TouchKeyHandler implements DeviceKeyHandler {
     }
 
     private void back() {
-        AEXUtils.sendKeycode(KeyEvent.KEYCODE_BACK);
+        ArrowUtils.sendKeycode(KeyEvent.KEYCODE_BACK);
         if (KeyCode == "SmartKey") {
             doSmartkeyHapticFeedback();
         }
@@ -301,7 +301,7 @@ public class TouchKeyHandler implements DeviceKeyHandler {
     }
 
     private void home() {
-        AEXUtils.sendKeycode(KeyEvent.KEYCODE_HOME);
+        ArrowUtils.sendKeycode(KeyEvent.KEYCODE_HOME);
         if (KeyCode == "SmartKey") {
             doSmartkeyHapticFeedback();
         }
@@ -314,7 +314,7 @@ public class TouchKeyHandler implements DeviceKeyHandler {
     }
 
     private void recents() {
-        AEXUtils.sendKeycode(KeyEvent.KEYCODE_APP_SWITCH);
+        ArrowUtils.sendKeycode(KeyEvent.KEYCODE_APP_SWITCH);
         if (KeyCode == "SmartKey") {
             doSmartkeyHapticFeedback();
         }
@@ -327,7 +327,7 @@ public class TouchKeyHandler implements DeviceKeyHandler {
     }
 
     private void up() {
-        AEXUtils.sendKeycode(KeyEvent.KEYCODE_DPAD_UP);
+        ArrowUtils.sendKeycode(KeyEvent.KEYCODE_DPAD_UP);
         if (KeyCode == "SmartKey") {
             doSmartkeyHapticFeedback();
         }
@@ -340,7 +340,7 @@ public class TouchKeyHandler implements DeviceKeyHandler {
     }
 
     private void down() {
-        AEXUtils.sendKeycode(KeyEvent.KEYCODE_DPAD_DOWN);
+        ArrowUtils.sendKeycode(KeyEvent.KEYCODE_DPAD_DOWN);
         if (KeyCode == "SmartKey") {
             doSmartkeyHapticFeedback();
         }
@@ -353,7 +353,7 @@ public class TouchKeyHandler implements DeviceKeyHandler {
     }
 
     private void left() {
-        AEXUtils.sendKeycode(KeyEvent.KEYCODE_DPAD_LEFT);
+        ArrowUtils.sendKeycode(KeyEvent.KEYCODE_DPAD_LEFT);
         if (KeyCode == "SmartKey") {
             doSmartkeyHapticFeedback();
         }
@@ -366,7 +366,7 @@ public class TouchKeyHandler implements DeviceKeyHandler {
     }
 
     private void right() {
-        AEXUtils.sendKeycode(KeyEvent.KEYCODE_DPAD_RIGHT);
+        ArrowUtils.sendKeycode(KeyEvent.KEYCODE_DPAD_RIGHT);
         if (KeyCode == "SmartKey") {
             doSmartkeyHapticFeedback();
         }
@@ -379,7 +379,7 @@ public class TouchKeyHandler implements DeviceKeyHandler {
     }
 
     private void assistant() {
-        AEXUtils.sendKeycode(KeyEvent.KEYCODE_ASSIST);
+        ArrowUtils.sendKeycode(KeyEvent.KEYCODE_ASSIST);
         if (KeyCode == "SmartKey") {
             doSmartkeyHapticFeedback();
         }
@@ -392,7 +392,7 @@ public class TouchKeyHandler implements DeviceKeyHandler {
     }
 
     private void wakeup() {
-        AEXUtils.sendKeycode(KeyEvent.KEYCODE_WAKEUP);
+        ArrowUtils.sendKeycode(KeyEvent.KEYCODE_WAKEUP);
         if (KeyCode == "SmartKey") {
             doSmartkeyHapticFeedback();
         }
@@ -405,7 +405,7 @@ public class TouchKeyHandler implements DeviceKeyHandler {
     }
 
     private void screenshot() {
-        AEXUtils.takeScreenshot(true);
+        ArrowUtils.takeScreenshot(true);
         if (KeyCode == "SmartKey") {
             doSmartkeyHapticFeedback();
         }

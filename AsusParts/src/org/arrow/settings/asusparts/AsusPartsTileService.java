@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.aospextended.settings.asusparts;
+package org.arrow.settings.asusparts;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;

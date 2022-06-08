@@ -21,7 +21,7 @@
     android:key="smartkey_gesture_settings"
     android:title="@string/smartkey_gesture_settings_title">
 
-    <org.aospextended.settings.asusparts.preference.SystemSettingSwitchPreference
+    <org.arrow.settings.asusparts.preference.SystemSettingSwitchPreference
         android:key="smartkey_gesture_haptic_feedback"
         android:title="@string/smartkey_gestures_haptic_feedback_title"
         android:summary="@string/smartkey_gestures_haptic_feedback_summary"

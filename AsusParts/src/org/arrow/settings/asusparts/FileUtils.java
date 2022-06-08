@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.aospextended.settings.asusparts;
+package org.arrow.settings.asusparts;
 
 import java.io.BufferedReader;
 import java.io.File;

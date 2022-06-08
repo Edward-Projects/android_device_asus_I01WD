@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.aospextended.settings.asusparts.doze;
+package org.arrow.settings.asusparts.doze;
 
 import android.os.Bundle;
 import android.preference.PreferenceActivity;

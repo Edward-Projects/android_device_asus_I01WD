@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.aospextended.settings.asusparts.touch;
+package org.arrow.settings.asusparts.touch;
 
 import android.app.ActionBar;
 import android.app.Fragment;
@@ -39,7 +39,7 @@ import androidx.preference.SwitchPreference;
 import com.android.internal.aospextended.hardware.LineageHardwareManager; // Need FWB support
 import com.android.internal.aospextended.hardware.TouchscreenGesture; // Need FWB support
 
-import org.aospextended.settings.asusparts.R;
+import org.arrow.settings.asusparts.R;
 
 import java.lang.System;
 

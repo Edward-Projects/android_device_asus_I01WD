@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.aospextended.settings.asusparts.doze;
+package org.arrow.settings.asusparts.doze;
 
 import android.content.Context;
 import android.hardware.Sensor;
@@ -24,19 +24,19 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.util.Log;
 
-public class HandwaveSensor implements SensorEventListener {
+public class PocketSensor implements SensorEventListener {
 
     private static final boolean DEBUG = true;
-    private static final String TAG = "HandwaveSensor";
+    private static final String TAG = "PocketSensor";
 
     private SensorManager mSensorManager;
     private Sensor mSensor;
     private Context mContext;
 
     private boolean mSawNear = false;
-    private long mWaveTime = 0;
+    private long mInPocketTime = 0;
 
-    public HandwaveSensor(Context context) {
+    public PocketSensor(Context context) {
         mContext = context;
         mSensorManager = (SensorManager)
                 mContext.getSystemService(Context.SENSOR_SERVICE);
@@ -51,15 +51,15 @@ public class HandwaveSensor implements SensorEventListener {
                 DozeUtils.launchDozePulse(mContext);
             }
         } else {
-            mWaveTime = event.timestamp;
+            mInPocketTime = event.timestamp;
         }
         mSawNear = isNear;
     }
 
     private boolean shouldPulse(long timestamp) {
-        long delta = timestamp - mWaveTime;
-        if ((DozeUtils.isHandwaveGestureEnabled(mContext)) && (delta < 1000000000L)) { // Wave must be less than 1 sencond
-            Log.d(TAG, "handwave unlock");
+        long delta = timestamp - mInPocketTime;
+        if ((DozeUtils.isPocketGestureEnabled(mContext)) && (delta > 3000000000L)) { // Pocket must be more than 3 seconds
+            Log.d(TAG, "pocket unlock");
             return true;
         }
         return false;

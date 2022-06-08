@@ -21,7 +21,7 @@
     android:key="fp_gesture_settings"
     android:title="@string/fp_gesture_settings_title">
 
-    <org.aospextended.settings.asusparts.preference.SystemSettingSwitchPreference
+    <org.arrow.settings.asusparts.preference.SystemSettingSwitchPreference
         android:key="fp_gesture_haptic_feedback"
         android:title="@string/fp_gestures_haptic_feedback_title"
         android:summary="@string/fp_gestures_haptic_feedback_summary"

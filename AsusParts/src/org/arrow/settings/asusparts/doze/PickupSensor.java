@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.aospextended.settings.asusparts.doze;
+package org.arrow.settings.asusparts.doze;
 
 import android.content.Context;
 import android.hardware.Sensor;

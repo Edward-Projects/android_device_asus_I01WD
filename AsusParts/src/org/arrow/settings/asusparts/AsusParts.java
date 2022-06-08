@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.aospextended.settings.asusparts;
+package org.arrow.settings.asusparts;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -30,7 +30,7 @@ import androidx.preference.SwitchPreference;
 import androidx.preference.TwoStatePreference;
 import android.provider.Settings;
 
-import org.aospextended.settings.asusparts.doze.DozeSettingsActivity;
+import org.arrow.settings.asusparts.doze.DozeSettingsActivity;
 
 public class AsusParts extends PreferenceFragment implements
         Preference.OnPreferenceChangeListener {

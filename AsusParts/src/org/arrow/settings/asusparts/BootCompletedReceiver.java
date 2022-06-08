@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.aospextended.settings.asusparts;
+package org.arrow.settings.asusparts;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -25,10 +25,10 @@ import android.provider.Settings;
 import android.util.Log;
 import androidx.preference.PreferenceManager;
 
-import org.aospextended.settings.asusparts.doze.DozeUtils;
-import org.aospextended.settings.asusparts.touch.SmartkeyGestureSettings;
-import org.aospextended.settings.asusparts.touch.FpGestureSettings;
-import org.aospextended.settings.asusparts.touch.TouchscreenGestureSettings;
+import org.arrow.settings.asusparts.doze.DozeUtils;
+import org.arrow.settings.asusparts.touch.SmartkeyGestureSettings;
+import org.arrow.settings.asusparts.touch.FpGestureSettings;
+import org.arrow.settings.asusparts.touch.TouchscreenGestureSettings;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
 

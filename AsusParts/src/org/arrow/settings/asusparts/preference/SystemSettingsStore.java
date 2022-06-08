@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.aospextended.settings.asusparts.preference;
+package org.arrow.settings.asusparts.preference;
 
 import android.content.ContentResolver;
 import android.preference.PreferenceDataStore;

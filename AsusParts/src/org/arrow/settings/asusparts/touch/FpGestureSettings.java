@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.aospextended.settings.asusparts.touch;
+package org.arrow.settings.asusparts.touch;
 
 import android.app.ActionBar;
 import android.app.Fragment;
@@ -36,14 +36,14 @@ import androidx.preference.PreferenceFragment;
 import androidx.preference.PreferenceManager;
 import androidx.preference.SwitchPreference;
 
-import com.android.internal.aospextended.hardware.LineageHardwareManager; // Need FWB support
-import com.android.internal.aospextended.hardware.TouchscreenGesture; // Need FWB support
+import com.android.internal.arrow.hardware.LineageHardwareManager; // Need FWB support
+import com.android.internal.arrow.hardware.TouchscreenGesture; // Need FWB support
 
-import org.aospextended.settings.asusparts.R;
+import org.arrow.settings.asusparts.R;
 
 import java.lang.System;
 
-public class SmartkeyGestureSettings extends PreferenceActivity
+public class FpGestureSettings extends PreferenceActivity
         implements PreferenceFragment.OnPreferenceStartFragmentCallback {
 
     @Override
@@ -76,7 +76,7 @@ public class SmartkeyGestureSettings extends PreferenceActivity
 
         private static final String KEY_TOUCHSCREEN_GESTURE = "touchscreen_gesture";
         private static final String TOUCHSCREEN_GESTURE_TITLE = KEY_TOUCHSCREEN_GESTURE + "_%s_title";
-        private static final String KEY_HAPTIC_FEEDBACK = "smartkey_gesture_haptic_feedback";
+        private static final String KEY_HAPTIC_FEEDBACK = "fp_gesture_haptic_feedback";
 
         private SwitchPreference mHapticFeedback;
 
@@ -86,14 +86,14 @@ public class SmartkeyGestureSettings extends PreferenceActivity
         @Override
         public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
 
-            setPreferencesFromResource(R.xml.smartkey_gesture_settings, rootKey);
+            setPreferencesFromResource(R.xml.fp_gesture_settings, rootKey);
 
             actionBar = getActivity().getActionBar();
             assert actionBar != null;
             actionBar.setDisplayHomeAsUpEnabled(true);
 
             if (isTouchscreenGesturesSupported(getContext())) {
-                initSmartkeyGestures();
+                initFpGestures();
             }
 
             mHapticFeedback = (SwitchPreference) findPreference(KEY_HAPTIC_FEEDBACK);
@@ -114,23 +114,23 @@ public class SmartkeyGestureSettings extends PreferenceActivity
             }
         };
 
-        private void initSmartkeyGestures() {
+        private void initFpGestures() {
             final LineageHardwareManager manager = LineageHardwareManager.getInstance(getContext());
             mTouchscreenGestures = manager.getTouchscreenGestures();
             final int[] actions = getDefaultGestureActions(getContext(), mTouchscreenGestures);
             for (final TouchscreenGesture gesture : mTouchscreenGestures) {
-                if (gesture.id < 1) {
-                getPreferenceScreen().addPreference(new SmartkeyGesturePreference(
+                if ((gesture.id > 0) && (gesture.id < 6)) {
+                getPreferenceScreen().addPreference(new FpGesturePreference(
                         getContext(), gesture, actions[gesture.id]));
                 }
             }
         }
 
-        private class SmartkeyGesturePreference extends ListPreference {
+        private class FpGesturePreference extends ListPreference {
             private final Context mContext;
             private final TouchscreenGesture mGesture;
 
-            public SmartkeyGesturePreference(final Context context,
+            public FpGesturePreference(final Context context,
                                                 final TouchscreenGesture gesture,
                                                 final int defaultAction) {
                 super(context);
@@ -138,13 +138,13 @@ public class SmartkeyGestureSettings extends PreferenceActivity
                 mGesture = gesture;
 
                 setKey(buildPreferenceKey(gesture));
-                setEntries(R.array.smartkey_gesture_action_entries);
-                setEntryValues(R.array.smartkey_gesture_action_values);
+                setEntries(R.array.fp_gesture_action_entries);
+                setEntryValues(R.array.fp_gesture_action_values);
                 setDefaultValue(String.valueOf(defaultAction));
                 setIcon(getIconDrawableResourceForAction(defaultAction));
 
                 setSummary("%s");
-                setDialogTitle(R.string.smartkey_gesture_action_dialog_title);
+                setDialogTitle(R.string.fp_gesture_action_dialog_title);
                 setTitle(Utils.getLocalizedString(
                         context.getResources(), gesture.name, TOUCHSCREEN_GESTURE_TITLE));
             }
@@ -227,7 +227,7 @@ public class SmartkeyGestureSettings extends PreferenceActivity
             }
         }
 
-        public static void restoreSmartkeyGestureStates(final Context context) {
+        public static void restoreFpGestureStates(final Context context) {
             if (!isTouchscreenGesturesSupported(context)) {
                 return;
             }

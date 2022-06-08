@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.aospextended.settings.asusparts.util;
+package org.arrow.settings.asusparts.util;
 
 import java.io.File;
 import java.io.FileNotFoundException;

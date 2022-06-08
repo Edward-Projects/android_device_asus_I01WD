@@ -25,7 +25,7 @@
         <PreferenceScreen
             android:key="doze"
             android:icon="@drawable/ic_doze"
-            android:fragment="org.aospextended.settings.asusparts.doze.DozeSettingsActivity"
+            android:fragment="org.arrow.settings.asusparts.doze.DozeSettingsActivity"
             android:summary="@string/ambient_display_gestures_summary"
             android:title="@string/ambient_display_gestures_title" />
 
@@ -41,8 +41,8 @@
             android:icon="@drawable/ic_smartkey"
             android:persistent="false" >
             <intent android:action="android.intent.action.MAIN"
-                    android:targetPackage="org.aospextended.settings.asusparts"
-                    android:targetClass="org.aospextended.settings.asusparts.touch.SmartkeyGestureSettings" />
+                    android:targetPackage="org.arrow.settings.asusparts"
+                    android:targetClass="org.arrow.settings.asusparts.touch.SmartkeyGestureSettings" />
         </Preference>
 
     </PreferenceCategory>
@@ -57,8 +57,8 @@
             android:icon="@drawable/ic_fingerprint"
             android:persistent="false" >
             <intent android:action="android.intent.action.MAIN"
-                    android:targetPackage="org.aospextended.settings.asusparts"
-                    android:targetClass="org.aospextended.settings.asusparts.touch.FpGestureSettings" />
+                    android:targetPackage="org.arrow.settings.asusparts"
+                    android:targetClass="org.arrow.settings.asusparts.touch.FpGestureSettings" />
         </Preference>
 
     </PreferenceCategory>
@@ -73,8 +73,8 @@
             android:icon="@drawable/ic_gesture"
             android:persistent="false" >
             <intent android:action="android.intent.action.MAIN"
-                    android:targetPackage="org.aospextended.settings.asusparts"
-                    android:targetClass="org.aospextended.settings.asusparts.touch.TouchscreenGestureSettings" />
+                    android:targetPackage="org.arrow.settings.asusparts"
+                    android:targetClass="org.arrow.settings.asusparts.touch.TouchscreenGestureSettings" />
         </Preference>
 
     </PreferenceCategory>

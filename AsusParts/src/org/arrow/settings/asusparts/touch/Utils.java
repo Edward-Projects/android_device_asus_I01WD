@@ -16,7 +16,7 @@
 *
 */
 
-package org.aospextended.settings.asusparts.touch;
+package org.arrow.settings.asusparts.touch;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -48,7 +48,7 @@ public class Utils {
     public static String getStringForResourceName(final Resources res,
                                                   final String resourceName,
                                                   final String defaultValue) {
-        final int resId = res.getIdentifier(resourceName, "string", "org.aospextended.settings.asusparts.touch");
+        final int resId = res.getIdentifier(resourceName, "string", "org.arrow.settings.asusparts.touch");
         if (resId <= 0) {
             Log.e(TAG, "No resource found for " + resourceName);
             return defaultValue;
